@@ -28,7 +28,7 @@ int main() {
         fgets(myProduct.name, MAX, stdin);
         myProduct.name[strlen(myProduct.name) - 1] = '\0';
 
-        if (strcmp(myProduct.name, "ls") == 0) {
+        if (strcmp(myProduct.name, "ls") == 0) { //Using for debugging mainly
             fread(&ExistingProduct, sizeof(Product), 1, fpbin);
             while (!feof(fpbin)) {
                 printf("%s, %.2fE, Stock: %d unit(s)\n", ExistingProduct.name, ExistingProduct.price, ExistingProduct.quant);
